@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3131151c4fd3b7e433ad97fefb388ecb",
+    "content-hash": "f44700c49a8c8954c0a47bb11f6a5939",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -765,6 +765,50 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "helhum/config-loader",
+            "version": "v0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/config-loader.git",
+                "reference": "056a0e5fe9c5bc41c9bde2ce93e437c9aa733f4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helhum/config-loader/zipball/056a0e5fe9c5bc41c9bde2ce93e437c9aa733f4f",
+                "reference": "056a0e5fe9c5bc41c9bde2ce93e437c9aa733f4f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0 <7.3.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^5.0",
+                "symfony/yaml": "^2.8 || ^3.3 || ^4.0"
+            },
+            "suggest": {
+                "ext-yaml": "For improved performance when parsing yaml files you should use the PECL YAML Parser php extension",
+                "symfony/yaml": "To be able to parse yaml files, you will need symfony/yaml"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helhum\\ConfigLoader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Generic config loader with context and environment support.",
+            "time": "2018-02-27T16:55:14+00:00"
         },
         {
             "name": "helhum/typo3-composer-setup",
@@ -1910,7 +1954,7 @@
                 "source": "https://github.com/dwenzel/bkk_template/tree/develop",
                 "issues": "https://github.com/dwenzel/bkk_template/issues"
             },
-            "time": "2018-03-18T16:30:05+00:00"
+            "time": "2018-03-18 16:30:05"
         }
     ],
     "aliases": [],

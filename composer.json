@@ -45,9 +45,9 @@
     "typo3/cms-frontend": "^8.7",
     "typo3/cms-install": "^8.7",
     "typo3/cms-recordlist": "^8.7",
-    "typo3/cms-saltedpasswords": "^8.7",
     "helhum/typo3-console": "^5.2",
-    "typo3/cms-css-styled-content": "^8.7"
+    "typo3/cms-css-styled-content": "^8.7",
+    "helhum/config-loader": "^0.8.0"
   },
   "repositories": [
     {
