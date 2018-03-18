@@ -1,0 +1,111 @@
+{
+  "name": "dwenzel/bkk-bundle",
+  "description": "Website bundle for bolschewistischekurkapelle.org",
+  "type": "project",
+  "require": {
+    "typo3/cms": "^8.7",
+    "helhum/typo3-no-symlink-install": "^0.2.0",
+    "typo3/cms-belog": "^8.7",
+    "typo3/cms-beuser": "^8.7",
+    "typo3/cms-context-help": "^8.7",
+    "typo3/cms-fluid-styled-content": "^8.7",
+    "typo3/cms-felogin": "^8.7",
+    "typo3/cms-filelist": "^8.7",
+    "typo3/cms-extensionmanager": "^8.7",
+    "typo3/cms-lang": "^8.7",
+    "typo3/cms-cshmanual": "^8.7",
+    "typo3/cms-saltedpasswords": "^8.7",
+    "typo3/cms-scheduler": "^8.7",
+    "typo3/cms-sv": "^8.7",
+    "typo3/cms-about": "^8.7",
+    "typo3/cms-documentation": "^8.7",
+    "typo3/cms-filemetadata": "^8.7",
+    "typo3/cms-form": "^8.7",
+    "typo3/cms-func": "^8.7",
+    "typo3/cms-linkvalidator": "^8.7",
+    "typo3/cms-recycler": "^8.7",
+    "typo3/cms-sys-note": "^8.7",
+    "typo3/cms-t3editor": "^8.7",
+    "typo3/cms-wizard-crpages": "^8.7",
+    "typo3/cms-wizard-sortpages": "^8.7",
+    "typo3/cms-impexp": "^8.7",
+    "typo3/cms-info": "^8.7",
+    "typo3/cms-rte-ckeditor": "^8.7",
+    "typo3/cms-info-pagetsconfig": "^8.7",
+    "typo3/cms-lowlevel": "^8.7",
+    "typo3/cms-reports": "^8.7",
+    "typo3/cms-rsaauth": "^8.7",
+    "typo3/cms-setup": "^8.7",
+    "typo3/cms-tstemplate": "^8.7",
+    "typo3/cms-viewpage": "^8.7",
+    "typo3/cms-backend": "^8.7",
+    "typo3/cms-core": "^8.7",
+    "typo3/cms-extbase": "^8.7",
+    "typo3/cms-fluid": "^8.7",
+    "typo3/cms-frontend": "^8.7",
+    "typo3/cms-install": "^8.7",
+    "typo3/cms-recordlist": "^8.7",
+    "typo3/cms-saltedpasswords": "^8.7",
+    "helhum/typo3-console": "^5.2",
+    "typo3/cms-css-styled-content": "^8.7"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:dwenzel/bkk_template.git"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Dirk Wenzel",
+      "email": "der-wenzel@gmx.de"
+    }
+  ],
+  "config": {
+    "vendor-dir": "app/vendor",
+    "web-dir": "app/web"
+  },
+  "scripts": {
+    "package-states": [
+      "php app/vendor/bin/typo3cms install:generatepackagestates"
+    ],
+    "folder-structure": [
+      "php app/vendor/bin/typo3cms install:fixfolderstructure"
+    ],
+    "pre-deploy": [
+      "# Scripts here will be executed after composer install"
+    ],
+    "post-autoload-dump": [
+      "@package-states",
+      "@folder-structure"
+    ]
+  },
+  "extra": {
+    "typo3/class-alias-loader": {
+      "always-add-alias-loader": true
+    },
+    "autoload-case-sensitivity": false,
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "app/web"
+    },
+    "helhum/typo3-console": {
+      "install-extension-dummy": false
+    },
+    "installer-types": [
+      "legacy-webroot-library"
+    ],
+    "installer-paths": {
+      "app/web/{$name}/": [
+        "type:legacy-webroot-library"
+      ]
+    }
+  },
+  "require-dev": {
+    "dwenzel/bkk-template": "dev-develop"
+  }
+}
