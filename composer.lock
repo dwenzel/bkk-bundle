@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f44700c49a8c8954c0a47bb11f6a5939",
+    "content-hash": "78eaad64777ee873703881b864e7083d",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -584,6 +584,157 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "dwenzel/t3calendar",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwenzel/t3calendar.git",
+                "reference": "42e5905577d726dc5a1851e8815ca107ad1e09af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwenzel/t3calendar/zipball/42e5905577d726dc5a1851e8815ca107ad1e09af",
+                "reference": "42e5905577d726dc5a1851e8815ca107ad1e09af",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": ">=6.2.0,<=8.99.99"
+            },
+            "require-dev": {
+                "nimut/testing-framework": "^1.1",
+                "phpunit/phpunit": "^4.8 || ^5.6"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DWenzel\\T3calendar\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dirk Wenzel",
+                    "email": "der-wenzel@gmx.de"
+                }
+            ],
+            "description": "Calendar extension for the TYPO3 CMS",
+            "time": "2017-07-12T13:48:46+00:00"
+        },
+        {
+            "name": "dwenzel/t3events",
+            "version": "0.37.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwenzel/t3events.git",
+                "reference": "63399813d52d0ccbdfed1e6d6d7dd4dd9436a61e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwenzel/t3events/zipball/63399813d52d0ccbdfed1e6d6d7dd4dd9436a61e",
+                "reference": "63399813d52d0ccbdfed1e6d6d7dd4dd9436a61e",
+                "shasum": ""
+            },
+            "require": {
+                "dwenzel/t3calendar": "^0.4.0",
+                "typo3/cms": ">=7.6.0,<=8.99.99"
+            },
+            "replace": {
+                "t3events": "self.version",
+                "typo3-ter/t3events": "self.version"
+            },
+            "require-dev": {
+                "nimut/testing-framework": "^1.1",
+                "phpunit/phpunit": "^4.8 || ^5.6"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.32.x-dev",
+                    "dev-develop": "0.32.x-dev"
+                },
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DWenzel\\T3events\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dirk Wenzel",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Versatile events extension for the TYPO3 CMS",
+            "keywords": [
+                "events",
+                "extension",
+                "typo3"
+            ],
+            "time": "2018-02-05T17:18:42+00:00"
+        },
+        {
+            "name": "fluidtypo3/flux",
+            "version": "8.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/flux.git",
+                "reference": "c64f9cd1af1ec8b4871b2bed465e9c923f43b616"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/flux/zipball/c64f9cd1af1ec8b4871b2bed465e9c923f43b616",
+                "reference": "c64f9cd1af1ec8b4871b2bed465e9c923f43b616",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "typo3/cms": ">=7.6.13, <7.6.99|^8.4.1"
+            },
+            "replace": {
+                "flux": "self.version",
+                "typo3-ter/flux": "self.version"
+            },
+            "require-dev": {
+                "fluidtypo3/development": "^3.0"
+            },
+            "suggest": {
+                "fluidtypo3/fluidcontent": "Gives the ability to render Content Templates with pure fluid.",
+                "fluidtypo3/fluidcontent_core": "Gives the ability to render core content elements with pure fluid.",
+                "fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid.",
+                "fluidtypo3/vhs": "ViewHelper library for Fluid templates."
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "FluidTYPO3\\Flux\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "The flux package from FluidTYPO3",
+            "homepage": "http://fluidtypo3.org",
+            "time": "2017-04-24T10:27:43+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1222,6 +1373,98 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "salvatore-eckel/t3cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/salvaracer/t3cms.git",
+                "reference": "f805998cc8db8d47ed9e1b129ff824ecf629fbd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/salvaracer/t3cms/get/f805998cc8db8d47ed9e1b129ff824ecf629fbd0.zip",
+                "reference": "f805998cc8db8d47ed9e1b129ff824ecf629fbd0",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Salvatore Eckel",
+                    "email": "salvaracer@gmx.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 Content Management",
+            "homepage": "https://fenewmedia.de",
+            "keywords": [
+                "t3cms",
+                "typo3"
+            ],
+            "support": {
+                "email": "salvaracer@gmx.de",
+                "source": "https://bitbucket.org/salvaracer/t3cms/src/f805998cc8db8d47ed9e1b129ff824ecf629fbd0/?at=master"
+            },
+            "time": "2018-03-23 00:06:43"
+        },
+        {
+            "name": "salvatoreeckel/t3content_dopetrope",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/salvaracer/t3content_dopetrope.git",
+                "reference": "master"
+            },
+            "type": "typo3-cms-extension"
+        },
+        {
+            "name": "salvatoreeckel/t3themes_dopetrope",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/salvaracer/t3themes_dopetrope.git",
+                "reference": "a8831b96961ff3db5e8b3c6aa138ed23bf2c07bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/salvaracer/t3themes_dopetrope/get/a8831b96961ff3db5e8b3c6aa138ed23bf2c07bb.zip",
+                "reference": "a8831b96961ff3db5e8b3c6aa138ed23bf2c07bb",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7 || ^9.0"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GP-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Salvatore Eckel",
+                    "email": "salvaracer@gmx.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 Theme Dopetrope for EXT:t3cms",
+            "keywords": [
+                "TYPO3",
+                "extension",
+                "t3themes_dopetrope",
+                "theme"
+            ],
+            "support": {
+                "email": "salvaracer@gmx.de",
+                "source": "https://bitbucket.org/salvaracer/t3themes_dopetrope/src/a8831b96961ff3db5e8b3c6aa138ed23bf2c07bb/?at=master",
+                "issues": "https://bitbucket.org/salvaracer/t3themes_dopetrope/issues"
+            },
+            "time": "2018-03-23 00:13:27"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.9",
             "source": {
@@ -1618,16 +1861,16 @@
         },
         {
             "name": "typo3/cms",
-            "version": "v8.7.11",
+            "version": "v8.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "a12fcf718b166376aec739f5159583f7725ba1c7"
+                "reference": "9e6040c33dc285a52698f9d8fade8515ec7605ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/a12fcf718b166376aec739f5159583f7725ba1c7",
-                "reference": "a12fcf718b166376aec739f5159583f7725ba1c7",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/9e6040c33dc285a52698f9d8fade8515ec7605ac",
+                "reference": "9e6040c33dc285a52698f9d8fade8515ec7605ac",
                 "shasum": ""
             },
             "require": {
@@ -1816,7 +2059,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2018-03-13T12:44:45+00:00"
+            "time": "2018-03-22T11:35:42+00:00"
         },
         {
             "name": "typo3/cms-composer-installers",
@@ -1934,15 +2177,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dwenzel/bkk_template.git",
-                "reference": "ba154c1a0129132c1158f4b9bb164c9c370b6c6e"
+                "reference": "7dced4f5bd2ac535323f083d69c89e95c2719146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dwenzel/bkk_template/zipball/ba154c1a0129132c1158f4b9bb164c9c370b6c6e",
-                "reference": "ba154c1a0129132c1158f4b9bb164c9c370b6c6e",
+                "url": "https://api.github.com/repos/dwenzel/bkk_template/zipball/7dced4f5bd2ac535323f083d69c89e95c2719146",
+                "reference": "7dced4f5bd2ac535323f083d69c89e95c2719146",
                 "shasum": ""
             },
             "type": "typo3-cms-extension",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
             "authors": [
                 {
                     "name": "Dirk Wenzel",
@@ -1954,12 +2200,14 @@
                 "source": "https://github.com/dwenzel/bkk_template/tree/develop",
                 "issues": "https://github.com/dwenzel/bkk_template/issues"
             },
-            "time": "2018-03-18 16:30:05"
+            "time": "2018-03-24 11:48:24"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "salvatore-eckel/t3cms": 20,
+        "salvatoreeckel/t3themes_dopetrope": 20,
         "dwenzel/bkk-template": 20
     },
     "prefer-stable": false,

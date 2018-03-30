@@ -131,6 +131,24 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'flux' => [
+            'packagePath' => 'typo3conf/ext/flux/',
+        ],
+        't3cms' => [
+            'packagePath' => 'typo3conf/ext/t3cms/',
+        ],
+        't3themes_dopetrope' => [
+            'packagePath' => 'typo3conf/ext/t3themes_dopetrope/',
+        ],
+        't3content_dopetrope' => [
+            'packagePath' => 'typo3conf/ext/t3content_dopetrope/',
+        ],
+        't3calendar' => [
+            'packagePath' => 'typo3conf/ext/t3calendar/',
+        ],
+        't3events' => [
+            'packagePath' => 'typo3conf/ext/t3events/',
+        ],
         'bkk_template' => [
             'packagePath' => 'typo3conf/ext/bkk_template/',
         ],

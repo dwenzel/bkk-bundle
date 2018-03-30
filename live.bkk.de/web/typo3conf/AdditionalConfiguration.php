@@ -11,7 +11,8 @@
  *
  * The TYPO3 project - inspiring people to share!
  */
-$confDir = __DIR__ . '/../../../';
+$confDir = __DIR__ . '/../../';
+require_once __DIR__ . '/../../vendor/autoload.php';
 $configReaderFactory = new \Helhum\ConfigLoader\ConfigurationReaderFactory($confDir);
 $configLoader = new \Helhum\ConfigLoader\ConfigurationLoader(
     [

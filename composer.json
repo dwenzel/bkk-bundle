@@ -47,7 +47,12 @@
     "typo3/cms-recordlist": "^8.7",
     "helhum/typo3-console": "^5.2",
     "typo3/cms-css-styled-content": "^8.7",
-    "helhum/config-loader": "^0.8.0"
+    "fluidtypo3/flux": "^8.2",
+    "helhum/config-loader": "^0.8.0",
+    "salvatore-eckel/t3cms": "dev-master",
+    "salvatoreeckel/t3themes_dopetrope": "dev-master",
+    "salvatoreeckel/t3content_dopetrope": "^2.2",
+    "dwenzel/t3events": "^0.37.3"
   },
   "repositories": [
     {
@@ -57,6 +62,27 @@
     {
       "type": "vcs",
       "url": "git@github.com:dwenzel/bkk_template.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://bitbucket.org/salvaracer/t3cms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://bitbucket.org/salvaracer/t3themes_dopetrope.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "salvatoreeckel/t3content_dopetrope",
+        "type": "typo3-cms-extension",
+        "version": "2.2.0",
+        "source": {
+          "url": "https://bitbucket.org/salvaracer/t3content_dopetrope.git",
+          "type": "git",
+          "reference": "master"
+        }
+      }
     }
   ],
   "authors": [
@@ -66,15 +92,15 @@
     }
   ],
   "config": {
-    "vendor-dir": "app/vendor",
-    "web-dir": "app/web"
+    "vendor-dir": "live.bkk.de/vendor",
+    "web-dir": "live.bkk.de/web"
   },
   "scripts": {
     "package-states": [
-      "php app/vendor/bin/typo3cms install:generatepackagestates"
+      "php live.bkk.de/vendor/bin/typo3cms install:generatepackagestates"
     ],
     "folder-structure": [
-      "php app/vendor/bin/typo3cms install:fixfolderstructure"
+      "php live.bkk.de/vendor/bin/typo3cms install:fixfolderstructure"
     ],
     "pre-deploy": [
       "# Scripts here will be executed after composer install"
@@ -91,7 +117,7 @@
     "autoload-case-sensitivity": false,
     "typo3/cms": {
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": "app/web"
+      "web-dir": "live.bkk.de/web"
     },
     "helhum/typo3-console": {
       "install-extension-dummy": false
@@ -100,12 +126,19 @@
       "legacy-webroot-library"
     ],
     "installer-paths": {
-      "app/web/{$name}/": [
+      "live.bkk.de/web/{$name}/": [
         "type:legacy-webroot-library"
       ]
     }
   },
   "require-dev": {
     "dwenzel/bkk-template": "dev-develop"
+  },
+  "autoload": {
+    "psr-4": {
+      "SalvatoreEckel\\T3cms\\": "live.bkk.de/web/typo3conf/ext/t3cms/Classes",
+      "SalvatoreEckel\\T3themesDopetrope\\": "live.bkk.de/web/typo3conf/ext/t3themes_dopetrope/Classes"
+    }
   }
+
 }

@@ -6,15 +6,14 @@
 /conception/*
 env.*
 
-!/app/
-/app/*
-!/app/web/
-/app/web/*
-!/app/web/typo3conf/
-/app/web/typo3conf/*
-!/app/web/typo3conf/AdditionalConfiguration.php
-!/app/web/typo3conf/LocalConfiguration.php
-!/app/web/typo3conf/PackageStates.php
+!/live.bkk.de/
+/live.bkk.de/*
+!/live.bkk.de/web/
+/live.bkk.de/web/*
+!/live.bkk.de/web/typo3conf/
+/live.bkk.de/web/typo3conf/*
+!/live.bkk.de/web/typo3conf/AdditionalConfiguration.php
+!/live.bkk.de/web/typo3conf/LocalConfiguration.php
+!/live.bkk.de/web/typo3conf/PackageStates.php
 
-/docker-compose.yml
 /tmp
